@@ -20,4 +20,4 @@ Validaciones realizadas:
 ![Captura de Pantalla](https://i.ibb.co/q0QsTFQ/validacionnrotaxi.png)
 ![Captura de Pantalla](https://i.ibb.co/19kgPbC/validacionnroomnibus.png)
 ![Captura de Pantalla](https://i.ibb.co/8gB2s1C/validacioncantidad.png)
-![Captura de Pantalla](https://i.ibb.co/8gB2s1C/validacioncantidad.png)
+
