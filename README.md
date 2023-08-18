@@ -14,3 +14,10 @@ La **Transport Web App** es una aplicación web simple para administrar informac
 A continuación, se muestra una captura de pantalla de la interfaz de la aplicación:
 
 ![Captura de Pantalla](https://i.ibb.co/cbcnh17/Captura-de-pantalla-2023-08-18-144023.png)
+
+Validaciones realizadas:
+
+![Captura de Pantalla](https://i.ibb.co/q0QsTFQ/validacionnrotaxi.png)
+![Captura de Pantalla](https://i.ibb.co/19kgPbC/validacionnroomnibus.png)
+![Captura de Pantalla](https://i.ibb.co/8gB2s1C/validacioncantidad.png)
+![Captura de Pantalla](https://i.ibb.co/8gB2s1C/validacioncantidad.png)
