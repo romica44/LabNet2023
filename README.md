@@ -15,4 +15,4 @@ En este ejercicio, se presenta un método en una clase llamada "Logic". Este mé
 - Ejercicio 4: Excepción Personalizada    
 Este ejercicio muestra cómo crear una excepción personalizada. Se agrega una clase al proyecto que hereda de Exception y se crea un constructor que permite ingresar un mensaje personalizado. Se realiza una sobrecarga en el mensaje para agregar información adicional. La excepción personalizada se lanza desde la lógica y se captura en la capa de presentación.
 
-# Se creó Aplicación .Net Framework por consola y se incorporaron los test unitarios para cada ejercicio.
+## Se creó Aplicación .Net Framework por consola y se incorporaron los test unitarios para cada ejercicio. ##
