@@ -3,7 +3,7 @@
 # Ejercicios de Manejo de Excepciones en C#
 Este repositorio contiene ejercicios de manejo de excepciones en C# que demuestran cómo generar, capturar y manejar diferentes tipos de excepciones.
 
-- Ejercicio 1: División por Cero
+- Ejercicio 1: División por Cero    
 En este ejercicio, se presenta un método que genera una excepción al intentar dividir un número por cero. La excepción generada es capturada y se muestra el mensaje correspondiente junto con un aviso de si la operación fue exitosa o no.
 
 - Ejercicio 2: División Personalizada
