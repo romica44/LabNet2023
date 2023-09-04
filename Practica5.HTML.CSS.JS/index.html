@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de Adivinar el Número</title>
+    <link rel="stylesheet" href="Css/styles.css" />
+    <link rel="icon" href="Assets/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1 class="card-title">ADIVINA EL NÚMERO</h1>
+        <div class="card-content">
+          <form id="game-form">
+            <div class="form-group">
+              <label for="numero">Ingresa un número:</label>
+              <input
+                type="number"
+                class="form-input"
+                id="numero"
+                placeholder="Escribe un número"
+              />
+            </div>
+            <button type="submit" class="btn">Adivinar</button>
+          </form>
+          <p class="score">Puntaje: <span id="score">0</span></p>
+          <p class="high-score">
+            Puntaje Máximo: <span id="high-score">0</span>
+          </p>
+          <p id="result-message"></p>
+        </div>
+      </div>
+    </div>
+    <script src="Js/script.js"></script>
+  </body>
+</html>
