@@ -20,4 +20,4 @@
 ## Se crean las validaciones del ingreso de datos.
 
 ## VISTA PREVIA DE LA APP
-<img src="Assets/preliminar_view.png" alt="VistaApp" width="200" height="150">
+<img src="http://imgfz.com/i/GesWI2M.png" alt="VistaApp" width="200" height="150">
