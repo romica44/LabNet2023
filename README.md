@@ -20,4 +20,4 @@
 ## Se crean las validaciones del ingreso de datos.
 
 ## Vista Previa
-<img src="http://imgfz.com/i/GesWI2M.png" alt="VistaApp" width="400" height="500">
+<img src="http://imgfz.com/i/GesWI2M.png" alt="VistaApp" width="400" height="300">
