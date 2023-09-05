@@ -7,10 +7,10 @@
 -Agregar validaciones que crean necesarias.
 
 ## Indicaciones:
- 1- Ingresa un numero
- 2- Si no adivinas el número, restas un punto y se te indica a cuántos números estás de distancia.
- 3- Si adivinas, sumas 10 puntos.
- 4- Pierdes cuando tu Score llegue a cero.
+1- Ingresa un numero
+2- Si no adivinas el número, restas un punto y se te indica a cuántos números estás de distancia.
+3- Si adivinas, sumas 10 puntos.
+4- Pierdes cuando tu Score llegue a cero.
 
 ## Se crea una app simple con HTML, CSS y JS puro.
 ## Se crean las validaciones del ingreso de datos.
