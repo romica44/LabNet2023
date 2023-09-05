@@ -16,6 +16,9 @@
   <body>
     <div class="container">
       <div class="card">
+        <button id="reset-button" class="btn-reset">Reiniciar</button>
+        <br>
+        <br>
         <h1 class="card-title">ADIVINA EL NÚMERO</h1>
         <div class="card-content">
           <form id="game-form">
@@ -28,12 +31,14 @@
                 placeholder="Escribe un número"
               />
             </div>
-            <button type="submit" class="btn">Adivinar</button>
+            <button type="submit" class="btn">Probar</button>
           </form>
-          <p class="score">Puntaje: <span id="score">0</span></p>
+          <p class="score">
+            Score: <span id="score">0</span></p>
           <p class="high-score">
-            Puntaje Máximo: <span id="high-score">0</span>
+            Highscore: <span id="high-score">0</span>
           </p>
+          <button id="hint-button">Obtener Pista</button>
           <p id="result-message"></p>
         </div>
       </div>
