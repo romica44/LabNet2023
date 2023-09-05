@@ -18,3 +18,6 @@
 
 ## Se crea una app simple con HTML, CSS y JS puro.
 ## Se crean las validaciones del ingreso de datos.
+
+## VISTA PREVIA DE LA APP
+<img src="Assets/preliminar_view.png" alt="VistaApp" width="200" height="150">
