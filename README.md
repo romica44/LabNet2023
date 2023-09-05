@@ -9,9 +9,12 @@
 
 ## Indicaciones:
 1. Ingresa un numero
-2. Si no adivinas el número, restas un punto y se te indica a cuántos números estás de distancia.
+2. Si no adivinas el número, restas cinco puntos.
 3. Si adivinas, sumas 10 puntos.
-4. Pierdes cuando tu Score llegue a cero.
+4. Puedes pedir una pista antes de probar el número, donde te va a indicar a cuanta distancia te encuentras del número a adivinar.
+5. Pierdes cuando tu Score llegue a cero.
+6. Puedes resetear la partida y comenzar de nuevo.
+7. ¡PRUEBALO! Diviertete un rato!
 
 ## Se crea una app simple con HTML, CSS y JS puro.
 ## Se crean las validaciones del ingreso de datos.
