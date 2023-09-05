@@ -19,5 +19,5 @@
 ## Se crea una app simple con HTML, CSS y JS puro.
 ## Se crean las validaciones del ingreso de datos.
 
-## VISTA PREVIA DE LA APP
-<img src="http://imgfz.com/i/GesWI2M.png" alt="VistaApp" width="200" height="150">
+## Vista Previa
+<img src="http://imgfz.com/i/GesWI2M.png" alt="VistaApp" width="400" height="500">
