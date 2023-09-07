@@ -1,12 +1,8 @@
-﻿using Practica3.EF.Entities;
-using Practica3.EF.Logic;
+﻿using Practica6.MVC.Entities;
+using Practica6.MVC.Logic;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Practica3.EF.UI
+namespace Practica6.MVC.UI
 {
     class Program
     {

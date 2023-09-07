@@ -72,21 +72,21 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Practica3.EF.Data\Practica3.EF.Data.csproj">
+    <ProjectReference Include="..\Practica3.EF.Data\Practica6.MVC.Data.csproj">
       <Project>{56dd6ce4-8f3d-4370-8298-3fabc3288459}</Project>
-      <Name>Practica3.EF.Data</Name>
+      <Name>Practica6.MVC.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Practica3.EF.Entities\Practica3.EF.Entities.csproj">
+    <ProjectReference Include="..\Practica3.EF.Entities\Practica6.MVC.Entities.csproj">
       <Project>{6ac3c0d0-b8dc-4d30-b1cd-dc51724a6fac}</Project>
-      <Name>Practica3.EF.Entities</Name>
+      <Name>Practica6.MVC.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Practica3.EF.Logic\Practica3.EF.Logic.csproj">
+    <ProjectReference Include="..\Practica3.EF.Logic\Practica6.MVC.Logic.csproj">
       <Project>{103f3076-ee09-438b-8bda-a7a807f5c8f7}</Project>
-      <Name>Practica3.EF.Logic</Name>
+      <Name>Practica6.MVC.Logic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Practica3.EF.UI\Practica3.EF.UI.csproj">
+    <ProjectReference Include="..\Practica3.EF.UI\Practica6.MVC.UI.csproj">
       <Project>{b366a8e4-cb31-4f96-94c8-98ef41a84e9c}</Project>
-      <Name>Practica3.EF.UI</Name>
+      <Name>Practica6.MVC.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

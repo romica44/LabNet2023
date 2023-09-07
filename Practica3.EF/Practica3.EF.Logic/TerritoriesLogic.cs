@@ -1,13 +1,10 @@
-﻿using Practica3.EF.Data;
-using Practica3.EF.Entities;
+﻿using Practica6.MVC.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Practica3.EF.Logic
+
+namespace Practica6.MVC.Logic
 {
     public class TerritoriesLogic : BaseLogic, IABMLogic<Territories>
     {

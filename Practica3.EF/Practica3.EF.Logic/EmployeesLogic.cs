@@ -1,11 +1,9 @@
-﻿using Practica3.EF.Entities;
+﻿using Practica6.MVC.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Practica3.EF.Logic
+namespace Practica6.MVC.Logic
 {
     public class EmployeesLogic : BaseLogic, IABMLogic<Employees>
     {
