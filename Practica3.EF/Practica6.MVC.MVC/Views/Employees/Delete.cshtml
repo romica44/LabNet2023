@@ -1,0 +1,21 @@
+﻿@model Practica6.MVC.MVC.Models.EmployeesView
+@{
+    ViewBag.Title = "Borrar Empleado";
+}
+
+<div id="deleteModalContent" class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title">Borrar Empleado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar" onclick="closeModals()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>Estás seguro de borrar a @Model.FirstName @Model.LastName?</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeModals()">Cancelar</button>
+        <button type="button" class="btn btn-danger" onclick="deleteEmployee(@Model.EmployeeID)">Borrar</button>
+    </div>
+</div>
+

@@ -14,9 +14,9 @@ namespace Practica6.MVC.Logic
 
         public void Add(Employees newEmployee)
         {
-            if (string.IsNullOrEmpty(newEmployee.FirstName) || string.IsNullOrEmpty(newEmployee.LastName))
+            if (string.IsNullOrEmpty(newEmployee.FirstName) || string.IsNullOrEmpty(newEmployee.LastName) || string.IsNullOrEmpty(newEmployee.Title))
             {
-                throw new ArgumentException("El nombre y apellido del empleado son obligatorios.");
+                throw new ArgumentException("El nombre, apellido y puesto laboral del empleado son obligatorios.");
             }
 
             context.Employees.Add(newEmployee);
@@ -44,12 +44,18 @@ namespace Practica6.MVC.Logic
             {
                 employeeUpdate.FirstName = employee.FirstName;
                 employeeUpdate.LastName = employee.LastName;
+                employeeUpdate.Title = employee.Title;
                 context.SaveChanges();
             }
             else
             {
                 throw new ArgumentException("El empleado no existe.");
             }
+        }
+
+        public Employees GetEmployeeByID(int id)
+        {
+            return context.Employees.FirstOrDefault(e => e.EmployeeID == id);
         }
     }
 

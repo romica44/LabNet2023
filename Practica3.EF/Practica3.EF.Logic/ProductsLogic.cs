@@ -6,10 +6,10 @@ using System.Linq;
 
 namespace Practica6.MVC.Logic
 {
-        public class ProductsLogic : BaseLogic,IABMLogic<Products>
-        {
+    public class ProductsLogic : BaseLogic, IABMLogic<Products>
+    {
         public void Add(Products element)
-            {
+        {
             if (string.IsNullOrEmpty(element.ProductName))
             {
                 throw new ArgumentException("El nombre del producto es obligatorio.");
@@ -22,10 +22,10 @@ namespace Practica6.MVC.Logic
 
             context.Products.Add(element);
             context.SaveChanges();
-            }
+        }
 
-            public void Delete(int id)
-            {
+        public void Delete(int id)
+        {
             using (var context = new NorthwindContext())
             {
                 var productToDelete = context.Products.Find(id);
@@ -49,10 +49,10 @@ namespace Practica6.MVC.Logic
             }
         }
 
-            public List<Products> GetAll()
-            {
-                return context.Products.ToList();
-            }
+        public List<Products> GetAll()
+        {
+            return context.Products.ToList();
+        }
 
         public Products GetProductByID(int id)
         {
@@ -60,20 +60,20 @@ namespace Practica6.MVC.Logic
         }
 
         public void Update(Products element)
+        {
+            var existingProduct = context.Products.Find(element.ProductID);
+
+            if (existingProduct != null)
             {
-                var existingProduct = context.Products.Find(element.ProductID);
+                existingProduct.ProductName = element.ProductName;
+                existingProduct.UnitPrice = element.UnitPrice;
 
-                if (existingProduct != null)
-                {
-                    existingProduct.ProductName = element.ProductName;
-                    existingProduct.UnitPrice = element.UnitPrice;
-
-                    context.SaveChanges();
-                }
-                else
-                {
+                context.SaveChanges();
+            }
+            else
+            {
                 throw new ArgumentException("El producto no existe.");
-                }
             }
         }
     }
+}

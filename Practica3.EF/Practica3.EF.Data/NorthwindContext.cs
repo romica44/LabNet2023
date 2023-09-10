@@ -1,4 +1,5 @@
 using Practica6.MVC.Entities;
+using System.Collections.Generic;
 using System.Data.Entity;
 
 namespace Practica6.MVC.Data
@@ -21,6 +22,7 @@ namespace Practica6.MVC.Data
         public virtual DbSet<Shippers> Shippers { get; set; }
         public virtual DbSet<Suppliers> Suppliers { get; set; }
         public virtual DbSet<Territories> Territories { get; set; }
+        public IEnumerable<object> OtherRelatedTable { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
