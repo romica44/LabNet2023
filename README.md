@@ -9,7 +9,7 @@
 - Se agrega MVC con sus Controllers, Models y Views.
 - Se agrega en la Sección de Empleados las funciones de agregar, actualizar y borrar.
 - Se agregan Customs Validations dentro de los Models y Validaciones HTML en los formularios. 
-- Se utilizas Swal Fire, Swal Alert, JQuery, Bootstrap.
+- Se utiliza Swal Fire, Swal Alert, JQuery, Bootstrap.
 
 ## Imágenes de la app.
 <img src="https://i.ibb.co/RY0bJHc/northwind-inicio.png" alt="northwind-inicio" border="0">
