@@ -1,9 +1,9 @@
-﻿using Practica6.MVC.Entities;
+﻿using Practica7.WebApi.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Practica6.MVC.Logic
+namespace Practica7.WebApi.Logic
 {
     public class EmployeesLogic : BaseLogic, IABMLogic<Employees>
     {
@@ -37,7 +37,7 @@ namespace Practica6.MVC.Logic
             }
         }
 
-        public void Update(Employees employee)
+        public bool Update(Employees employee)
         {
             var employeeUpdate = context.Employees.Find(employee.EmployeeID);
             if (employeeUpdate != null)
@@ -46,16 +46,22 @@ namespace Practica6.MVC.Logic
                 employeeUpdate.LastName = employee.LastName;
                 employeeUpdate.Title = employee.Title;
                 context.SaveChanges();
+                return true; 
             }
             else
             {
-                throw new ArgumentException("El empleado no existe.");
+                return false; 
             }
         }
 
         public Employees GetEmployeeByID(int id)
         {
             return context.Employees.FirstOrDefault(e => e.EmployeeID == id);
+        }
+
+        void IABMLogic<Employees>.Update(Employees element)
+        {
+            throw new NotImplementedException();
         }
     }
 

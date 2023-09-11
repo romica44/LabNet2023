@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Practica6.MVC.Logic
+namespace Practica7.WebApi.Logic
 {
     interface IABMLogic<T>
     {

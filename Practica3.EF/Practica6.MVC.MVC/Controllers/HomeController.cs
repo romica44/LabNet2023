@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace Practica6.MVC.MVC.Controllers
+namespace Practica7.WebApi.MVC.Controllers
 {
     public class HomeController : Controller
     {

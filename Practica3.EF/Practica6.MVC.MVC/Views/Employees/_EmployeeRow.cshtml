@@ -1,10 +1,13 @@
-﻿@model Practica6.MVC.MVC.Models.EmployeesView
+﻿@model  Practica7.WebApi.MVC.Models.EmployeesView
 
 <tr id="row_@Model.EmployeeID">
     <td>@Model.EmployeeID</td>
-    <td><input type="text" class="form-control" id="firstName_@Model.EmployeeID" value="@Model.FirstName" pattern="[A-Za-z]+" title="Ingresa solo letras, sin espacios ni caracteres especiales" required/></td>
-    <td><input type="text" class="form-control" id="lastName_@Model.EmployeeID" value="@Model.LastName" pattern="[A-Za-z]+" title="Ingresa solo letras, sin espacios ni caracteres especiales" required/></td>
-    <td><input type="text" class="form-control" id="title_@Model.EmployeeID" value="@Model.Title" pattern="[A-Za-z]+" title="Ingresa solo letras, sin espacios ni caracteres especiales" required/></td>
+    <td><input type="text" class="form-control" id="firstName_@Model.EmployeeID" value="@Model.FirstName" pattern="[A-Za-z]+" title="Ingresa solo letras, sin espacios ni caracteres especiales" required /></td>
+    @Html.ValidationMessageFor(model => model.FirstName)
+    <td><input type="text" class="form-control" id="lastName_@Model.EmployeeID" value="@Model.LastName" pattern="[A-Za-z]+" title="Ingresa solo letras, sin espacios ni caracteres especiales" required /></td>
+    @Html.ValidationMessageFor(model => model.LastName)
+    <td><input type="text" class="form-control" id="title_@Model.EmployeeID" value="@Model.Title" pattern="[A-Za-z]+" title="Ingresa solo letras, sin espacios ni caracteres especiales" required /></td>
+    @Html.ValidationMessageFor(model => model.Title)
     <td class="text-center">
         <!-- Botones para actualizar y borrar -->
         <button class="btn btn-info btn-sm" onclick="openUpdate(@Model.EmployeeID, '@Url.Action("Update", "Employees")')">Actualizar</button>

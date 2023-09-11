@@ -1,10 +1,10 @@
-﻿using Practica6.MVC.Entities;
+﻿using Practica7.WebApi.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 
-namespace Practica6.MVC.Logic
+namespace Practica7.WebApi.Logic
 {
     public class TerritoriesLogic : BaseLogic, IABMLogic<Territories>
     {

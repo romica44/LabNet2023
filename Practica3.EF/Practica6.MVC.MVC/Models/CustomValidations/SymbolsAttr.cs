@@ -2,7 +2,7 @@
 using System.Linq;
 
 
-namespace Practica6.MVC.MVC.Models.CustomValidations
+namespace Practica7.WebApi.MVC.Models.CustomValidations
 {
     public class SymbolsAttr : ValidationAttribute
     {

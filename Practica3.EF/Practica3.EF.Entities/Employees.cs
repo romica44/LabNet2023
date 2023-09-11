@@ -1,4 +1,4 @@
-namespace Practica6.MVC.Entities
+namespace Practica7.WebApi.Entities
 {
     using System;
     using System.Collections.Generic;

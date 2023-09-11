@@ -1,11 +1,7 @@
-﻿using Practica6.MVC.MVC.Models.CustomValidations;
-using System;
-using System.Collections.Generic;
+﻿using Practica7.WebApi.MVC.Models.CustomValidations;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
-namespace Practica6.MVC.MVC.Models
+namespace Practica7.WebApi.MVC.Models
 {
     public class ProductsView
     {
@@ -21,5 +17,10 @@ namespace Practica6.MVC.MVC.Models
 
         [Required(ErrorMessage = "The Unit Price is required.")]
         public decimal UnitPrice { get; set; }
+        public string QuantityPerUnit { get; set; }
+        public int? SupplierID { get; set; }
+        public int? CategoryID { get; set; }
+        public short? UnitsInStock { get; set; }
+        public short? UnitsOnOrder { get; set; }
     }
 }

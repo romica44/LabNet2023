@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Practica6.MVC.MVC.Models.CustomValidations
+namespace Practica7.WebApi.MVC.Models.CustomValidations
 {
     public class CapitalizeAttr: ValidationAttribute
     {

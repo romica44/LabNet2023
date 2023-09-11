@@ -1,6 +1,6 @@
-﻿using Practica6.MVC.Data;
+﻿using Practica7.WebApi.Data;
 
-namespace Practica6.MVC.Logic
+namespace Practica7.WebApi.Logic
 {
     public class BaseLogic
     {

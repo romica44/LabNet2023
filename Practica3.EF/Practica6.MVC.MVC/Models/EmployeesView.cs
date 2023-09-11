@@ -1,8 +1,8 @@
-﻿using Practica6.MVC.MVC.Models.CustomValidations;
+﻿using Practica7.WebApi.MVC.Models.CustomValidations;
 using System.ComponentModel.DataAnnotations;
 
 
-namespace Practica6.MVC.MVC.Models
+namespace Practica7.WebApi.MVC.Models
 {
     public class EmployeesView
     {

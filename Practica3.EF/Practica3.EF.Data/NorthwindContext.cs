@@ -1,8 +1,8 @@
-using Practica6.MVC.Entities;
+using Practica7.WebApi.Entities;
 using System.Collections.Generic;
 using System.Data.Entity;
 
-namespace Practica6.MVC.Data
+namespace Practica7.WebApi.Data
 {
     public partial class NorthwindContext : DbContext
     {

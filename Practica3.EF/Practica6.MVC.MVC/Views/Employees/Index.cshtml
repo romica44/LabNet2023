@@ -1,4 +1,4 @@
-﻿@model List<Practica6.MVC.MVC.Models.EmployeesView>
+﻿@model List<Practica7.WebApi.MVC.Models.EmployeesView>
 @{
     ViewBag.Title = "Empleados";
 }
@@ -25,7 +25,7 @@
         <div class="col-md-4">
             <div id="addForm" style="display: none;">
                 <!-- Formulario de agregar empleado -->
-                @Html.Partial("Create", new Practica6.MVC.MVC.Models.EmployeesView())
+                @Html.Partial("Create", new Practica7.WebApi.MVC.Models.EmployeesView())
             </div>
         </div>
     </div>
@@ -56,7 +56,7 @@
 <!-- Modales de Actualización y Eliminación -->
 <div id="updateModal" class="modal">
     <div class="modal-dialog">
-            @Html.Partial("Update", new Practica6.MVC.MVC.Models.EmployeesView());
+            @Html.Partial("Update", new Practica7.WebApi.MVC.Models.EmployeesView());
     </div>
 </div>
 
