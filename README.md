@@ -10,9 +10,7 @@
 -  Se creo en el proyecto MVC las conexiones a la Api externa (https://dolarapi.com/v1/dolares), se realizó Controllers y Views y se agregó la ruta dentro de la web.
 -  Se creo nuevo proyecto de WebApi donde se configuraron las rutas y se creo la Api.
   
-   [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/19052312-8570f80c-05fa-4f92-813a-a96796de86ca?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D19052312-8570f80c-05fa-4f92-813a-a96796de86ca%26entityType%3Dcollection%26workspaceId%3Dcda4ce96-4a2d-4a33-a40d-35ad20e87cf0)
-
-  [![API](https://i.ibb.co/4fWDcbB/pngwing-com.jpg)](https://api.postman.com/collections/19052312-8570f80c-05fa-4f92-813a-a96796de86ca?access_key=PMAT-01HA2GQ2FSRJSTN97ZH58V38WR)
+   [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/19052312-8570f80c-05fa-4f92-813a-a96796de86ca?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D19052312-8570f80c-05fa-4f92-813a-a96796de86ca%26entityType%3Dcollection%26workspaceId%3Dcda4ce96-4a2d-4a33-a40d-35ad20e87cf0) [![API](https://i.ibb.co/4fWDcbB/pngwing-com.jpg)](https://api.postman.com/collections/19052312-8570f80c-05fa-4f92-813a-a96796de86ca?access_key=PMAT-01HA2GQ2FSRJSTN97ZH58V38WR)
 
 ## Imagenes de la App con lo incorporado:
 
