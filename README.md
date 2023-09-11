@@ -12,7 +12,7 @@
   
    [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/19052312-8570f80c-05fa-4f92-813a-a96796de86ca?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D19052312-8570f80c-05fa-4f92-813a-a96796de86ca%26entityType%3Dcollection%26workspaceId%3Dcda4ce96-4a2d-4a33-a40d-35ad20e87cf0)
 
-  ![Api](https://api.postman.com/collections/19052312-8570f80c-05fa-4f92-813a-a96796de86ca?access_key=PMAT-01HA2GQ2FSRJSTN97ZH58V38WR)
+  ![API](https://api.postman.com/collections/19052312-8570f80c-05fa-4f92-813a-a96796de86ca?access_key=PMAT-01HA2GQ2FSRJSTN97ZH58V38WR)
 
 ## Imagenes de la App con lo incorporado:
 
