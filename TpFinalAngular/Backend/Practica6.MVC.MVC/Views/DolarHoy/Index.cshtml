@@ -1,0 +1,35 @@
+﻿@model List<Practica7.WebApi.Models.DolarHoyView>
+@{
+    ViewBag.Title = "Dolar Hoy";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h3>Cotización del Dólar Hoy</h3>
+    <hr />
+
+    <div class="row">
+        @foreach (var dolar in Model)
+        {
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title bg-primary text-white font-weight-bold p-2">Dolar @dolar.Nombre</h4>
+                        <p class="card-text">Compra: $@dolar.Compra</p>
+                        <p class="card-text">Venta: $@dolar.Venta</p>   
+                        <p class="card-text">Fecha de Actualización: @dolar.FechaActualizacion</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+

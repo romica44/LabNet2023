@@ -1,0 +1,39 @@
+﻿@model List<Practica7.WebApi.MVC.Models.CustomersView>
+@{
+    ViewBag.Title = "Clientes";
+}
+
+<head>
+    <!-- Enlaces a jQuery, SweetAlert2 y estilos de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/ModalStyles.css")">
+    <script src="~/Scripts/inputsValidations.js"></script>
+</head>
+
+<h3>SECCIÓN CLIENTES</h3>
+<hr />
+<table class="table">
+    <thead class="bg-light">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre Empresa</th>
+            <th scope="col">Contacto</th>
+            <th scope="col">Telefono</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.CustomerID</td>
+                <td>@customer.CompanyName</td>
+                <td>@customer.ContactName</td>
+                <td>@customer.Phone</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

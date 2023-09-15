@@ -1,0 +1,143 @@
+﻿@model List<Practica7.WebApi.MVC.Models.EmployeesView>
+@{
+    ViewBag.Title = "Empleados";
+}
+
+<head>
+    <!-- Enlaces a jQuery, SweetAlert2 y estilos de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+</head>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="float-left">SECCIÓN EMPLEADOS</h3>
+        </div>
+        <div class="col-md-3 text-right">
+            <button class="btn btn-success" id="showAddForm">Agregar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div id="addForm" style="display: none;">
+                <!-- Formulario de agregar empleado -->
+                @Html.Partial("Create", new Practica7.WebApi.MVC.Models.EmployeesView())
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div>
+    <table class="table">
+        <thead class="bg-light">
+            <tr>
+                <th scope="col" style="width: 10%;">#</th>
+                <th scope="col" style="width: 10%;">Nombre</th>
+                <th scope="col" style="width: 10%;">Apellido</th>
+                <th scope="col" style="width: 10%;">Puesto Laboral</th>
+                <th scope="col" style="width: 20%; text-align: center;">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                @Html.Partial("_EmployeeRow", employee)
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Modales de Actualización y Eliminación -->
+<div id="updateModal" class="modal">
+    <div class="modal-dialog">
+            @Html.Partial("Update", new Practica7.WebApi.MVC.Models.EmployeesView());
+    </div>
+</div>
+
+
+<script>
+        // Función para abrir el modal de actualización
+    function openUpdate(employeeId, updateUrl) {
+        closeModals();
+        $.ajax({
+            type: 'GET',
+            url: updateUrl + "?id=" + employeeId,
+            success: function (data) {
+                // Directamente establece el contenido del modal
+                $("#updateModal .modal-content").html(data);
+                $("#updateModal").modal("show");
+            },
+            error: function () {
+                Swal.fire('Error', 'Hubo un error al cargar los datos del empleado', 'error');
+            }
+        });
+    }
+    // Función para cerrar todos los modales
+    function closeModals() {
+        $(".modal").modal("hide");
+        $("#updateModal").hide();
+    }
+
+    function openDelete(employeeId, firstName, lastName) {
+        Swal.fire({
+            title: '¿Estás seguro de borrar a ' + firstName + ' ' + lastName + '?',
+            text: "Este empleado será eliminado.",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Borrar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            console.log(result)
+            if (result.isConfirmed) {
+                deleteEmployee(employeeId);
+            }
+        });
+    }
+
+    // Función para cerrar el modal de eliminación y enviar solicitud de eliminación
+    function deleteEmployee(employeeId) {
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("Eliminar", "Employees")',
+            data: { employeeID: employeeId },
+            success: function (data) {
+                if (data.success) {
+                    // Eliminar la fila de la tabla
+                    $("#row_" + employeeId).remove();
+                    Swal.fire('Eliminado', 'El empleado se ha eliminado correctamente', 'success');
+                } else {
+                    Swal.fire('Error', 'Hubo un error al eliminar el empleado', 'error');
+                }
+            },
+            error: function () {
+                Swal.fire('Error', 'Hubo un error al eliminar el empleado', 'error');
+            }
+        });
+    }
+
+    // Función para cerrar el modal de agregar empleado
+    function closeAddEmployeeModal() {
+        $("#addEmployeeModal").modal("hide");
+        $("#addForm").hide();
+    }
+
+    $(document).ready(function () {
+        // Función para mostrar el formulario de agregar
+        $("#showAddForm").click(function () {
+            $("#addForm").show();
+        });
+        // Función para mostrar el modal de agregar empleado
+        $("#showAddForm").click(function () {
+            $("#addEmployeeModal").modal("show");
+        });
+    });
+</script>
+
