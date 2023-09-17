@@ -1,0 +1,9 @@
+/* Establece un tamaño mínimo para el contenido */
+.home-content {
+    min-height: 400px; /* Ajusta el valor según tus necesidades */
+  }
+  
+  /* Agrega un margen inferior para el footer */
+  .home-footer-space {
+    margin-bottom: 100px; /* Ajusta el valor según el tamaño de tu footer */
+  }

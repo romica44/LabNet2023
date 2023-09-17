@@ -1,0 +1,54 @@
+<div class="container">
+  <br />
+  <p class="custom-paragraph">{{ product ? "Editar" : "Agregar" }} Producto</p>
+  <form [formGroup]="formProduct" class="border p-4 mt-4">
+    <div class="mb-2">
+      <label for="ProductName" class="input-group-text"
+        >Nombre del Producto</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="ProductName"
+        formControlName="ProductName"
+        required
+      />
+      <div
+        class="text-danger"
+        *ngIf="
+          formProduct.get('ProductName')?.hasError('required') &&
+          formProduct.get('ProductName')?.touched
+        "
+      >
+        <span>El nombre es <strong>obligatorio.</strong></span>
+      </div>
+    </div>
+    <div class="mb-2">
+      <label for="UnitPrice" class="input-group-text">Precio Unitario</label>
+      <input
+        type="text"
+        class="form-control"
+        id="UnitPrice"
+        formControlName="UnitPrice"
+        required
+      />
+      <div
+        class="text-danger"
+        *ngIf="
+          formProduct.get('UnitPrice')?.hasError('required') &&
+          formProduct.get('UnitPrice')?.touched
+        "
+      >
+        <span>El Precio Unitario es <strong>obligatorio.</strong></span>
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="m-2 btn btn-primary"
+      [disabled]="formProduct.invalid"
+      (click)="saveProduct()"
+    >
+      {{ product ? "Editar" : "Agregar" }} Producto
+    </button>
+  </form>
+</div>

@@ -15,6 +15,17 @@ namespace Practica7.WebApi.Api
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+
+        }
+
+        protected void Application_BeginRequest()
+        {
+            if (Request.HttpMethod == "OPTIONS")
+            {
+                Response.AddHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+                Response.AddHeader("Access-Control-Allow-Headers", "Content-Type");
+                Response.End();
+            }
         }
     }
 }

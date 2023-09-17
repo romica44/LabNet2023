@@ -1,0 +1,11 @@
+<div class="container">
+    <ng-container *ngIf="employee; else productoForm">
+      <!-- Muestra el formulario de empleado -->
+      <app-form-employee [employee]="employee"></app-form-employee>
+    </ng-container>
+    
+    <ng-template #productoForm>
+      <!-- Muestra el formulario de producto -->
+      <app-form-product [product]="product"></app-form-product>
+    </ng-template>
+  </div>

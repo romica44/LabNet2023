@@ -1,0 +1,71 @@
+<div class="container">
+  <br />
+  <p class="custom-paragraph">{{ employee ? "Editar" : "Agregar" }} Empleado</p>
+  <form [formGroup]="formEmployee" class="border p-4 mt-4">
+    <div class="mb-2">
+      <label for="FirstName" class="input-group-text">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="FirstName"
+        formControlName="FirstName"
+        required
+      />
+      <div
+        class="text-danger"
+        *ngIf="
+          formEmployee.get('FirstName')?.hasError('required') &&
+          formEmployee.get('FirstName')?.touched
+        "
+      >
+        <span>El nombre es <strong>obligatorio.</strong></span>
+      </div>
+    </div>
+    <div class="mb-2">
+      <label for="LastName" class="input-group-text">Apellido</label>
+      <input
+        type="text"
+        class="form-control"
+        id="LastName"
+        formControlName="LastName"
+        required
+      />
+      <div
+        class="text-danger"
+        *ngIf="
+          formEmployee.get('LastName')?.hasError('required') &&
+          formEmployee.get('LastName')?.touched
+        "
+      >
+        <span>El apellido es <strong>obligatorio.</strong></span>
+      </div>
+    </div>
+    <div class="mb-2">
+      <label for="Title" class="input-group-text">Puesto Laboral</label>
+      <input
+        type="text"
+        class="form-control"
+        id="Title"
+        formControlName="Title"
+        required
+      />
+      <div
+        class="text-danger"
+        *ngIf="
+          formEmployee.get('Title')?.hasError('required') &&
+          formEmployee.get('Title')?.touched
+        "
+      >
+        <span>El puesto laboral es <strong>obligatorio.</strong></span>
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="m-2 btn btn-primary"
+      [disabled]="formEmployee.invalid"
+      (click)="saveEmployee()"
+    >
+      {{ employee ? "Editar" : "Agregar" }} Empleado
+    </button>
+  </form>
+</div>
