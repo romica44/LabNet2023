@@ -43,7 +43,7 @@ export class TableProductComponent {
 
   deleteProduct(productId: any) {
     Swal.fire({
-      title: '¿Estás seguro de eliminar este empleado?',
+      title: '¿Estás seguro de eliminar este producto?',
       text: 'Esta acción no se puede deshacer.',
       icon: 'warning',
       showCancelButton: true,
@@ -53,7 +53,7 @@ export class TableProductComponent {
       if (result.isConfirmed) {
         this.connectionDbService.deleteProduct(productId).subscribe((res) => {
           this.getProducts();
-          Swal.fire('Éxito', 'Empleado eliminado exitosamente.', 'success');
+          Swal.fire('Éxito', 'Producto eliminado exitosamente.', 'success');
         });
       } else {
         console.log('Eliminación cancelada');
