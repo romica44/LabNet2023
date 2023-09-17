@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ConnectionDbService } from '../../../services/connection-db.service';
-import { SweetAlertContentComponent } from '../../sweet-alert-content/sweet-alert-content.component';
+import { ModalEmployeeComponent } from '../modal-employee/modal-employee.component';
 import { Employee } from '../../../models/employee';
 import Swal from 'sweetalert2';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -24,7 +24,7 @@ export class TableEmployeeComponent implements OnInit {
   ) {}
 
   openSweetAlertModal(employee: Employee) {
-    const modalRef = this.modalService.open(SweetAlertContentComponent, {
+    const modalRef = this.modalService.open(ModalEmployeeComponent, {
       centered: true,
     });
     modalRef.componentInstance.employee = employee;

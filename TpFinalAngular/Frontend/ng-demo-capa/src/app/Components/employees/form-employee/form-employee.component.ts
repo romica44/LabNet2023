@@ -40,6 +40,7 @@ export class FormEmployeeComponent implements OnInit {
   get forms() {
     return this.formEmployee.controls;
   }
+  
 
   saveEmployee(): void {
     const employeeData = this.formEmployee.value;
@@ -49,7 +50,7 @@ export class FormEmployeeComponent implements OnInit {
 
       this.connectionDbService.updateEmployee(employeeData).subscribe((res) => {
         this.formEmployee.reset();
-        console.log('El empleado fue actualizado');
+        console.log('El empleado fue actualizado'); 
       });
     } else {
       this.connectionDbService.addEmployee(employeeData).subscribe((res) => {
@@ -58,6 +59,8 @@ export class FormEmployeeComponent implements OnInit {
       });
     }
   }
+
+
 
   cleanForm(): void {
     this.formEmployee.reset();

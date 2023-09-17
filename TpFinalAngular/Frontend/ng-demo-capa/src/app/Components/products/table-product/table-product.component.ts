@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ConnectionDbService } from '../../../services/connection-db.service';
-import { SweetAlertContentComponent } from '../../sweet-alert-content/sweet-alert-content.component';
+import { ModalProductComponent } from '../modal-product/modal-product.component';
 import { Product } from '../../../models/product';
 import Swal from 'sweetalert2';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -24,7 +24,7 @@ export class TableProductComponent {
   ) {}
 
   openSweetAlertModal(product: Product) {
-    const modalRef = this.modalService.open(SweetAlertContentComponent, {
+    const modalRef = this.modalService.open(ModalProductComponent, {
       centered: true,
     });
     modalRef.componentInstance.product = product;

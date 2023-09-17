@@ -14,7 +14,8 @@ import { TableEmployeeComponent } from './Components/employees/table-employee/ta
 import { FormEmployeeComponent } from './Components/employees/form-employee/form-employee.component';
 import { TableProductComponent } from './Components/products/table-product/table-product.component';
 import { FormProductComponent } from './Components/products/form-product/form-product.component';
-import { SweetAlertContentComponent } from './Components/sweet-alert-content/sweet-alert-content.component';
+import { ModalEmployeeComponent } from './Components/employees/modal-employee/modal-employee.component';
+import { ModalProductComponent } from './Components/products/modal-product/modal-product.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SweetAlertContentComponent } from './Components/sweet-alert-content/swe
     FormEmployeeComponent,
     TableProductComponent,
     FormProductComponent,
-    SweetAlertContentComponent
+    ModalEmployeeComponent,
+    ModalProductComponent
   ],
   imports: [
     BrowserModule,

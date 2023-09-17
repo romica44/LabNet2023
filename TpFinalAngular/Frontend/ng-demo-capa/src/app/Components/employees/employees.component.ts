@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SweetAlertContentComponent } from '../sweet-alert-content/sweet-alert-content.component';
+import { ModalEmployeeComponent } from './modal-employee/modal-employee.component';
 import { Employee } from '../../models/employee';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -15,7 +15,7 @@ export class EmployeesComponent {
   constructor(private modalService: NgbModal) {}
 
   openSweetAlertModal() {
-    const modalRef = this.modalService.open(SweetAlertContentComponent, {
+    const modalRef = this.modalService.open(ModalEmployeeComponent, {
       centered: true,
     });
 
