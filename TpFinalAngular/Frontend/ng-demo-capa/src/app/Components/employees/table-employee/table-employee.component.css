@@ -1,0 +1,6 @@
+.spinner-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+  }

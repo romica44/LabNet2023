@@ -1,32 +1,46 @@
-<table class="table">
-  <thead class="bg-light">
-    <tr>
-      <th scope="col" style="width: 10%">#</th>
-      <th scope="col" style="width: 10%">Nombre</th>
-      <th scope="col" style="width: 10%">Precio Unitario</th>
-      <th scope="col" style="width: 10%; text-align: left">Acciones</th>
-    </tr>
-  </thead>
-  <tbody class="table-group-divider bg-success" style="--bs-bg-opacity: 0.4">
-    <tr *ngFor="let product of productList">
-      <th>{{ product.ProductID }}</th>
-      <td>{{ product.ProductName }}</td>
-      <td>$ {{ product.UnitPrice }}</td>
-      <td>
-        <button
-          class="btn btn-info"
-          style="margin-right: 10px"
-          (click)="openSweetAlertModal(product)"
-        >
-          Editar
-        </button>
-        <button
-          class="btn btn-danger"
-          (click)="deleteProduct(product.ProductID)"
-        >
-          Eliminar
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div>
+  <div class="spinner-container" *ngIf="isLoading">
+    <mat-progress-spinner
+      [diameter]="50"
+      color="primary"
+      mode="indeterminate"
+    ></mat-progress-spinner>
+  </div>
+  <table class="table" *ngIf="!isLoading">
+    <thead class="bg-light">
+      <tr>
+        <th scope="col" style="width: 10%">#</th>
+        <th scope="col" style="width: 10%">Nombre</th>
+        <th scope="col" style="width: 10%">Precio Unitario</th>
+        <th scope="col" style="width: 10%; text-align: left">Acciones</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider bg-success" style="--bs-bg-opacity: 0.4">
+      <tr *ngFor="let product of dataSource.data">
+        <th>{{ product.ProductID }}</th>
+        <td>{{ product.ProductName }}</td>
+        <td>$ {{ product.UnitPrice }}</td>
+        <td>
+          <button
+            class="btn btn-info"
+            style="margin-right: 10px"
+            (click)="openSweetAlertModal(product)"
+          >
+            Editar
+          </button>
+          <button
+            class="btn btn-danger"
+            (click)="deleteProduct(product.ProductID)"
+          >
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <mat-paginator
+    *ngIf="dataSource"
+    [pageSizeOptions]="[5, 10, 25]"
+    [pageSize]="10"
+  ></mat-paginator>
+</div>

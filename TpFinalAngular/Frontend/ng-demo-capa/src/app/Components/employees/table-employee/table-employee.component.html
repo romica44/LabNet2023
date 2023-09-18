@@ -1,34 +1,44 @@
-<table class="table">
-  <thead class="bg-light">
-    <tr>
-      <th scope="col" style="width: 10%">#</th>
-      <th scope="col" style="width: 10%">Nombre</th>
-      <th scope="col" style="width: 10%">Apellido</th>
-      <th scope="col" style="width: 10%">Puesto Laboral</th>
-      <th scope="col" style="width: 10%; text-align: left">Acciones</th>
-    </tr>
-  </thead>
-  <tbody class="table-group-divider bg-success" style="--bs-bg-opacity: 0.4">
-    <tr *ngFor="let employee of employeeList">
-      <th>{{ employee.EmployeeID }}</th>
-      <td>{{ employee.FirstName }}</td>
-      <td>{{ employee.LastName }}</td>
-      <td>{{ employee.Title }}</td>
-      <td>
-        <button
-          class="btn btn-info"
-          style="margin-right: 10px"
-          (click)="openSweetAlertModal(employee)"
-        >
-          Editar
-        </button>
-        <button
-          class="btn btn-danger"
-          (click)="deleteEmployee(employee.EmployeeID)"
-        >
-          Eliminar
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div>
+  <div class="spinner-container" *ngIf="isLoading">
+    <mat-progress-spinner
+      [diameter]="50"
+      color="primary"
+      mode="indeterminate"
+    ></mat-progress-spinner>
+  </div>
+
+  <table class="table">
+    <thead class="bg-light">
+      <tr>
+        <th scope="col" style="width: 10%">#</th>
+        <th scope="col" style="width: 10%">Nombre</th>
+        <th scope="col" style="width: 10%">Apellido</th>
+        <th scope="col" style="width: 10%">Puesto Laboral</th>
+        <th scope="col" style="width: 10%; text-align: left">Acciones</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider bg-success" style="--bs-bg-opacity: 0.4">
+      <tr *ngFor="let employee of employeeList">
+        <th>{{ employee.EmployeeID }}</th>
+        <td>{{ employee.FirstName }}</td>
+        <td>{{ employee.LastName }}</td>
+        <td>{{ employee.Title }}</td>
+        <td>
+          <button
+            class="btn btn-info"
+            style="margin-right: 10px"
+            (click)="openSweetAlertModal(employee)"
+          >
+            Editar
+          </button>
+          <button
+            class="btn btn-danger"
+            (click)="deleteEmployee(employee.EmployeeID)"
+          >
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

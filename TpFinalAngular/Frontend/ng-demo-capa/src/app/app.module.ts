@@ -16,7 +16,10 @@ import { TableProductComponent } from './Components/products/table-product/table
 import { FormProductComponent } from './Components/products/form-product/form-product.component';
 import { ModalEmployeeComponent } from './Components/employees/modal-employee/modal-employee.component';
 import { ModalProductComponent } from './Components/products/modal-product/modal-product.component';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,11 @@ import { ModalProductComponent } from './Components/products/modal-product/modal
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatInputModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

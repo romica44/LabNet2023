@@ -1,21 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ConnectionDbService } from '../../../services/connection-db.service';
 import { ModalEmployeeComponent } from '../modal-employee/modal-employee.component';
 import { Employee } from '../../../models/employee';
 import Swal from 'sweetalert2';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-table-employee',
   templateUrl: './table-employee.component.html',
   styleUrls: ['./table-employee.component.css'],
 })
-export class TableEmployeeComponent implements OnInit {
+export class TableEmployeeComponent implements OnInit, AfterViewInit {
   formEmployee!: FormGroup;
   selectedEmployee: Employee | null = null;
   id!: number;
+  displayedColumns: string[] = ['id', 'Nombre', 'Apellido', 'Puesto Laboral', 'Acciones'];
 
+  applyFilter(event: any) {
+    const filterValue = (event.target as HTMLInputElement).value; 
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  dataSource: MatTableDataSource<Employee> = new MatTableDataSource();
+  isLoading: boolean = true;
+
+  ngAfterViewInit(): void {
+    this.dataSource.paginator = this.paginator;
+  }
   public employeeList: Array<Employee> = [];
   constructor(
     private readonly fb: FormBuilder,
@@ -31,13 +47,16 @@ export class TableEmployeeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getEmployees();
+    this.loadEmployees();
   }
 
-  getEmployees() {
+  loadEmployees() {
+    this.isLoading = true; 
     this.connectionDbService.getAllEmployees().subscribe((res) => {
       this.employeeList = res;
-      console.log(this.employeeList);
+      this.dataSource = new MatTableDataSource(this.employeeList);
+      this.dataSource.paginator = this.paginator;
+      this.isLoading = false;
     });
   }
 
@@ -52,7 +71,7 @@ export class TableEmployeeComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         this.connectionDbService.deleteEmployee(employeeId).subscribe((res) => {
-          this.getEmployees();
+          this.loadEmployees();
           Swal.fire('Éxito', 'Empleado eliminado exitosamente.', 'success');
         });
       } else {
